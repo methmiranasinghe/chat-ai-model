@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,31 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Chat Bot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-
-        #result {
-            margin-top: 20px;
-            text-align: left;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <!-- Include the external JavaScript file -->
     <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <h1>My Chat Bot</h1>
-    <p>Enter your search query:</p>
-    <input type="text" id="searchQuery" placeholder="Type your query here">
-    <button onclick="searchGemini()">Search</button>
+    <div class="container">
+        <h1 class="header">My Chat Bot</h1>
+        <p>Enter your search query:</p>
+        <input type="text" id="searchQuery" class="query-input" placeholder="Type your query here">
+        <button onclick="searchGemini()" class="search-btn">Search</button>
 
-    <div id="result"></div>
+        <div id="result" class="result-text"></div>
+    </div>
 
 </body>
 
 </html>
+
+
+

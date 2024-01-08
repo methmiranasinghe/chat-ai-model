@@ -41,6 +41,8 @@ function searchGemini() {
   });
 }
 
+
+
 function displayResults(results) {
   const resultDiv = document.getElementById("result");
   resultDiv.innerHTML = ""; // Clear previous results
@@ -52,7 +54,10 @@ function displayResults(results) {
         candidate.content.parts &&
         candidate.content.parts.length > 0
       ) {
-        const generatedText = candidate.content.parts[0].text;
+        const sentences = candidate.content.parts.map((part) =>
+          part.text.replace(/\n/g, "<br>")
+        );
+        const generatedText = sentences.join("<br>");
         resultDiv.innerHTML += `<p>${generatedText}</p>`;
       } else {
         resultDiv.innerHTML += "<p>No results found.</p>";
@@ -62,3 +67,5 @@ function displayResults(results) {
     resultDiv.innerHTML = "<p>No results found.</p>";
   }
 }
+
+
