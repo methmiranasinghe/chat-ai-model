@@ -48,3 +48,9 @@ body {
     font-size: 16px;
     color: #555;
 }
+
+.bot-gif {
+    max-width: 100%;
+    margin-bottom: 20px;
+    height: 200px;
+}

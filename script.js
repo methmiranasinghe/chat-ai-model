@@ -40,9 +40,6 @@ function searchGemini() {
     displayResults(data);
   });
 }
-
-
-
 function displayResults(results) {
   const resultDiv = document.getElementById("result");
   resultDiv.innerHTML = ""; // Clear previous results
